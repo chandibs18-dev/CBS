@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developers Survey Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: hsl(0, 0%, 4%); /* black margin */
+      display: flex;
+      justify-content: center;  /* horizontal center */
+      align-items: flex-start;  /* top aligned */
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      width: 750px; /* wider form */
+      margin-top: 40px;
+      background-color: #ffffff;
+      border-radius: 0; /* rectangular shape */
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      background-color: #e6ccff;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .sub-header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .form-body {
+      padding: 15px;
+      background-color: #0f5132; /* dark green */
+      color: white;
+    }
+
+    /* Inline form rows */
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .form-row label {
+      width: 150px; /* label width */
+      font-weight: bold;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      flex: 1; /* input takes remaining space */
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 0; /* rectangular */
+      box-sizing: border-box;
+    }
+
+    /* textarea white */
+    textarea {
+      background-color: white;
+    }
+
+    /* Developer radio buttons inline */
+    .options {
+      display: flex;
+      gap: 15px;
+      margin-left: 150px; /* align with inputs */
+      margin-top: 5px;
+    }
+
+    .options label {
+      font-weight: normal;
+    }
+
+    /* Qualification checkboxes inline */
+    .checkboxes {
+      display: flex;
+      gap: 15px;
+      margin-left: 150px; /* align with inputs */
+      margin-top: 5px;
+    }
+
+    /* Submit button */
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f7741d;
+      color: white;
+      border: none;
+      border-radius: 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+
+    <div class="header">Developers Survey Form</div>
+
+    <div class="sub-header">
+      Thank you for taking the time to help us know the about world wide developers
+    </div>
+
+    <div class="form-body">
+      <form>
+
+        <div class="form-row">
+          <label for="name">Name :-</label>
+          <input type="text" id="name" placeholder="Name">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email :-</label>
+          <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="form-row">
+          <label for="age">Age :-</label>
+          <input type="number" id="age" placeholder="Age">
+        </div>
+
+        <div class="form-row">
+          <label for="nationality">Nationality :-</label>
+          <select id="nationality">
+            <option>Select nationality</option>
+            <option>Indian</option>
+            <option>American</option>
+            <option>British</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Developer :-</label>
+        </div>
+        <div class="options">
+          <label><input type="radio" name="developer"> Frontend</label>
+          <label><input type="radio" name="developer"> Backend</label>
+          <label><input type="radio" name="developer"> Fullstack</label>
+        </div>
+
+        <div class="form-row">
+          <label>Qualification :-</label>
+        </div>
+        <div class="checkboxes">
+          <label><input type="checkbox"> 10+2</label>
+          <label><input type="checkbox"> Graduation</label>
+          <label><input type="checkbox"> Degree</label>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Describe about you :-</label>
+          <textarea id="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>
