@@ -1,0 +1,11 @@
+const path = require("path");
+const joinedPath = path.join("directory","file.txt");
+console.log(joinedPath);
+const absolutePath = path.resolve("relative/path","file.js");
+console.log(absolutePath);
+const dirname = path.dirname("/path/to/file.txt");
+console.log(dirname);
+const basename = path.basename("/path/to/file.txt");
+console.log(basename);
+const extname = path.extname("/path/to/file.txt");
+console.log(extname);

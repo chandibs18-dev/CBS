@@ -22,45 +22,58 @@ function Form() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-white">📝 Contact Form</h2>
-
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <div className="flex items-center justify-center min-h-[50vh]">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 p-6 rounded-lg max-w-xs w-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg"
+      >
+        <label htmlFor="name" className="font-semibold text-white">
+          Name:
+        </label>
         <input
+          id="name"
           type="text"
           name="name"
-          placeholder="Your Name"
+          placeholder="Enter your name"
           value={formData.name}
           onChange={handleChange}
           required
-          className="p-3 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="p-2 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
         />
 
+        <label htmlFor="email" className="font-semibold text-white">
+          Email:
+        </label>
         <input
+          id="email"
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder="YourEmail@example.com"
           value={formData.email}
           onChange={handleChange}
           required
-          className="p-3 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="p-2 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
         />
 
+        <label htmlFor="message" className="font-semibold text-white">
+          Message:
+        </label>
         <textarea
+          id="message"
           name="message"
-          placeholder="Your Message"
+          placeholder="Type your message here"
           value={formData.message}
           onChange={handleChange}
-          rows="4"
+          rows="3"
           required
-          className="p-3 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+          className="p-2 rounded bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
         />
 
         <button
           type="submit"
-          className="bg-white/20 text-white font-semibold py-3 rounded hover:bg-white hover:text-gray-900 transition"
+          className="mt-4 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 transition"
         >
-          Send
+          Submit
         </button>
       </form>
     </div>
