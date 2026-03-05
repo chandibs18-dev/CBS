@@ -1,0 +1,10 @@
+<p>Exam works!</p>
+<div class="cart box">
+  <h2>Computed Signals</h2>
+  <p>Price: ${{price()}} | Quantity: {{qty()}}</p>
+  <button (click)="add()">Add Item</button>
+  <hr />
+  <p>Subtotal: {{subtotal() | currency:'USD'}}</p>
+  <p>Tax (10%): {{tax() | currency:'USD'}}</p>
+  <h3>Grand Total: {{total() | currency:'USD'}}</h3>
+</div>
